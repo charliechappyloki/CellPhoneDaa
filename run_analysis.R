@@ -8,7 +8,7 @@ run_analysis <- function{
 	Xtrain <- read.table("./UCI_HAR_Dataset/X_train.txt")
 	ytrain <- read.table("./UCI_HAR_Dataset/y_train.txt")
 	testDF <- cbind(subjecttest, ytest, Xtest)
-	trainDF <- cbind(subjecttrain, ytrain, Xtrain)
+	trainDF <- cbind(subjecttrain, ytrain, Xtrain) 
 	entireDF <- rbind(testDF, trainDF)
 	features <- readLines("./UCI_HAR_Dataset/features.txt")
 	features <- c("subject","activity",features)
